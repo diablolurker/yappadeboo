@@ -1,0 +1,40 @@
+NTP SETUP
+
+update the Linux machine
+~# sudo apt update
+~# sudo apt upgrade
+
+Install NTP Server
+~# sudo apt install ntp
+
+Configure NTP pool
+~# nano /etc/ntp.conf
+
+List of the ntp pools in azerbaijan
+pool az.pool.ntp.org
+pool 0.asia.pool.ntp.org
+pool 1.asia.pool.ntp.org
+pool 2.asia.pool.ntp.org
+pool 3.asia.pool.ntp.org
+
+Restart Servic
+~# systemctl restart ntp
+
+Status of NTP server
+~# systemctl status ntp
+
+Allow NTP in firewall
+~# ufw allow ntp
+
+Update
+~# sudo apt update
+
+
+NTP CLIENT FOR LINUX!!
+~# sudo apt install ntpdate
+
+Synchronize time
+~# sudo ntpdate ip.of.your.ntpserver
+
+
+
